@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Regid:</strong>
+  <%= @reg.regid %>
+</p>
+
+<p>
+  <strong>X:</strong>
+  <%= @reg.x %>
+</p>
+
+<p>
+  <strong>Y:</strong>
+  <%= @reg.y %>
+</p>
+
+<%= link_to 'Edit', edit_reg_path(@reg) %> |
+<%= link_to 'Back', regs_path %>

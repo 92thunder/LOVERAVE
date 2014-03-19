@@ -1,0 +1,31 @@
+<h1>Listing regs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Regid</th>
+      <th>X</th>
+      <th>Y</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @regs.each do |reg| %>
+      <tr>
+        <td><%= reg.regid %></td>
+        <td><%= reg.x %></td>
+        <td><%= reg.y %></td>
+        <td><%= link_to 'Show', reg %></td>
+        <td><%= link_to 'Edit', edit_reg_path(reg) %></td>
+        <td><%= link_to 'Destroy', reg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reg', new_reg_path %>
